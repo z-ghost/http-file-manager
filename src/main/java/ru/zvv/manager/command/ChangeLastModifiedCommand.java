@@ -3,6 +3,7 @@ package ru.zvv.manager.command;
 import ru.zvv.manager.ICommand;
 import ru.zvv.manager.ICommandResult;
 import ru.zvv.manager.ParameterError;
+import ru.zvv.manager.result.BooleanResult;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;

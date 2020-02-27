@@ -1,4 +1,4 @@
-package ru.zvv.manager.command;
+package ru.zvv.manager.result;
 
 import ru.zvv.manager.ICommandResult;
 

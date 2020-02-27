@@ -5,6 +5,7 @@ import ru.zvv.manager.ICommand;
 import ru.zvv.manager.ICommandResult;
 import ru.zvv.manager.ParameterError;
 import ru.zvv.manager.command.ChangeLastModifiedCommand;
+import ru.zvv.manager.command.LsCommand;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,7 @@ public class HttpFileManagerServlet extends HttpServlet {
     public static final String COMMAND_PARAMETER_NAME = "Command";
     public static final String COMMAND_UPLOAD = "upload";
     public static final String COMMAND_CHANGE_LAST_MODIFIED = "changeLastModified";
+    public static final String COMMAND_LS = "ls";
 
     private Map<String, ICommand> commands = new HashMap<>();
 
@@ -35,6 +37,7 @@ public class HttpFileManagerServlet extends HttpServlet {
 
     @Override
     public void init() {
+        commands.put(COMMAND_LS, new LsCommand());
         commands.put(COMMAND_CHANGE_LAST_MODIFIED, new ChangeLastModifiedCommand());
     }
 
